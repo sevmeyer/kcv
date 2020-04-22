@@ -1,0 +1,34 @@
+; KCV 0.1.0
+
+kcv    = *ws *item [value]
+ws     = SP / HTAB / CR / LF
+item   = key *ws *(value 1*ws)
+key    = ALPHA *keyCh ":"
+keyCh  = ALPHA / DIGIT / "-" / "." / "_"
+value  = bool / number / string
+
+bool   = yes / no
+yes    = %x79.65.73  ; yes
+no     = %x6E.6F     ; no
+
+number = dec / hex
+dec    = int [frac] [exp]
+hex    = %x30.78 1*HEXDIG  ; 0x
+int    = ["-"] 1*DIGIT
+frac   = "." 1*DIGIT
+exp    = "e" int
+
+string = DQUOTE *scalar DQUOTE
+scalar = %x00-21       ; no "
+       / %x23-5B       ; no \
+       / %x5D-D7FF     ; no surrogates
+       / %xE000-10FFFF
+       / escape
+escape = "\" escCh
+escCh  = DQUOTE
+       / "\"
+       / %x6E          ; n
+       / %x72          ; r
+       / %x74          ; t
+       / %x75 4HEXDIG  ; uXXXX
+       / %x55 8HEXDIG  ; UXXXXXXXX

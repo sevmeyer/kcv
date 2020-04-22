@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="240" height="240">
+	<rect style="fill:#fff" width="240" height="240"/>
+	<path style="fill:#49e" d="m165 40-30 30 35 35 30-30zm-45 45-35 35 35 35 35-35z"/>
+	<path style="fill:#568" d="m120 20a100 100 0 0 0 -100 100 100 100 0 0 0 49 86l36-36-50-50 95.5-95.5a100 100 0 0 0 -30.5 -4.5zm95 70-125.5 125.5a100 100 0 0 0 30.5 4.5 100 100 0 0 0 100 -100 100 100 0 0 0 -5 -30z"/>
+</svg>
