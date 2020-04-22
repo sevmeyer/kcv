@@ -9,7 +9,6 @@ Therefore, KCV represents a one-dimensional dictionary, where each
 key maps to a list of atomic values. Nothing more.
 
 KCV is released under the terms of the [Creative Commons CC0].
-The [ABNF] grammar is provided in [GRAMMAR.abnf](GRAMMAR.abnf).
 
 
 Example
@@ -122,7 +121,6 @@ all correctly encoded characters must be preserved verbatim.
 Incorrectly encoded characters must not be propagated.
 
 
-[ABNF]: https://tools.ietf.org/html/rfc5234
 [Creative Commons CC0]: https://creativecommons.org/publicdomain/zero/1.0/
 [JSON]: https://json.org
 [TOML]: https://github.com/toml-lang/toml

@@ -1,4 +1,5 @@
-; KCV 0.1.0
+; KCV 0.1.0 grammar in ABNF notation
+; https://tools.ietf.org/html/rfc5234
 
 kcv    = *ws *item [value]
 ws     = SP / HTAB / CR / LF
